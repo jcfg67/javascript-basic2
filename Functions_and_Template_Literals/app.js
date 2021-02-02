@@ -11,19 +11,14 @@ console.log(`${nom} ${cognom}`);
 `${printUser("JC")}`;
 
 // Exercici 1  Nivell 3
-let funcArray = [
-    () => { console.log(funcArray[1]()) },
-    () => { console.log(funcArray[2]()); return 10 },
-    () => { console.log(funcArray[3]()); return 9 },
-    () => { console.log(funcArray[4]()); return 8 },
-    () => { console.log(funcArray[5]()); return 7 },
-    () => { console.log(funcArray[6]()); return 6 },
-    () => { console.log(funcArray[7]()); return 5 },
-    () => { console.log(funcArray[8]()); return 4 },
-    () => { console.log(funcArray[9]()); return 3 },
-    () => { console.log(1); return 2 }
-];
-funcArray[0]();
+// Crea una matriu de deu funcions i empleni-la mitjançant un bucle. Cada funció comptarà del 0-9 imprimint-ho per pantalla. Invoqui cada funció de l'array iterativament. Haurà d'imprimir-se per pantalla el compte de 0-9 deu vegades
+
+let funcArray = [];
+let func = () => {for (let i=0; i<10; i++) console.log(i)};
+for (let i=0; i<10; i++) funcArray[i] = func;
+
+funcArray.forEach(i => i());
+
 
 // Exercici 2  Nivell 3
 (name => console.log(name))("JuanC");
